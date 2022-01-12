@@ -1,0 +1,61 @@
+version: "3.0"
+
+nlu:
+- intent: inform  
+  examples: |
+    - O meu nome é [Jorge](usuario)
+    - meu nome é [Carlos](usuario)
+    - o nome é [Andreia](usuario)
+    - [daniel](usuario)
+    - [analia](usuario)
+    - [katia](usuario)
+    - eu sou [vinicius](usuario)
+    - eu me chamo [leonardo](usuario)
+    - sou [luiz](usuario)
+
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde 
+    - oi, como vai?
+    - oi, gostaria de saber sobre pokemons
+
+- intent: tchau
+  examples: |
+    - tchau
+    - adeus
+    - vejo você depois
+    - boa noite
+    - até logo
+
+- intent: afirmação
+  examples: |
+    - sim
+    - s
+    - entendido
+    - correto 
+   
+- intent: pokemons
+  examples: |
+    - quero saber sobre um pokemon
+    - quero saber sobre o pokemon 
+    - quero saber sobre 
+    - pokemons
+    - pokemon
+  
+- intent: infoNomePoke
+  examples: |
+    -  nome do pokemon é [bulbasaur](nome)
+    - O pokemon é [pikachu](nome)
+    - pokemon: [charmander](nome)
+    - pokemon é [paras](nome)
+    - O poke é [caterpie](nome)
+    - O nome desse pokemon é [butterfree](nome)
+    - O nome daquele pokemon [blastoise](nome)
+    - esse treco pokemon é [kakuna](nome)
+    - o nome do bicho pokemon é [rattata](nome)
+    - pokemon bicho é [zubat](nome)
+    - [psyduck](nome)
+  

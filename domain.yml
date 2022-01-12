@@ -1,0 +1,68 @@
+version: "3.0"
+
+intents:
+  - greet
+  - tchau
+  - afirmação
+  - pokemons
+  - infoNomePoke
+  - inform
+
+responses:
+  utter_greet:
+  - text: "olá"
+  - text: "Oi"
+  - text: "Olá, Boa tarde"
+
+  utter_did_that_help:
+  - text: "como posso te ajudar?"
+
+  utter_happy:
+  - text: "Otimo, até logo"
+
+  utter_tchau:
+  - text: "tchau"
+
+  utter_ask_usuario:
+  - text: "poderia me informa o seu primeiro nome?"
+ 
+  utter_pokemon:
+  - text: "qual pokemon?"
+
+  utter_ask_nome:
+  - text: "poderia me informa o nome do pokemon?"
+
+
+entities:
+ - nome 
+ - usuario 
+
+slots:
+  nome:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nome
+  usuario:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: usuario 
+
+actions:
+ - utter_greet 
+ - utter_did_that_help
+ - utter_happy
+ - utter_tchau
+ - utter_pokemon
+ - action_show_pokemon
+
+forms:
+ pokemon_form:
+    required_slots: 
+        - usuario
+        - nome
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
